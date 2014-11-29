@@ -30,7 +30,7 @@ public class CharacterManager : MonoBehaviour
     {
         param = new ParamManager();
         DontDestroyOnLoad( this );
-        SetLevel( 10 );
+        SetLevel( 1 );
 	}
 
     public ParamManager GetCharaParam()
@@ -48,6 +48,7 @@ public class CharacterManager : MonoBehaviour
             LevelParam[i] = int.Parse( values[i] );
         }
 
+        param.CP_Level = LevelParam[(int)ParamParamater.LEVEL];
         param.CP_HP = LevelParam[(int)ParamParamater.HP];
         param.CP_MaxHP = LevelParam[(int)ParamParamater.HP];
         param.CP_MP = LevelParam[(int)ParamParamater.MP];
